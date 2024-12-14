@@ -2,8 +2,8 @@ from gui import *
 
 def main():
     window = Tk()
-    window.title('Lab 10')
-    window.geometry('240x400')
+    window.title('REMOTE')
+    window.geometry('240x500')
     window.resizable(False,False)
     Gui(window)
     window.mainloop()

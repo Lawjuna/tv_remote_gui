@@ -1,7 +1,6 @@
 from tkinter import *
 import csv
 from moduel import *
-import os
 global tv_1
 tv_1 = Television()
 class Gui():
@@ -11,8 +10,6 @@ class Gui():
         """
 
         self.window=window
-
-
         self.frame_three = Frame(self.window)
         self.power_button = Button(self.frame_three, text="Power", command=self.power_up)
         self.power_button.pack()
@@ -79,10 +76,26 @@ class Gui():
         self.mute_shown.config(text="UNMUTED")
         if volume == 0:
             self.volume_shown.config(text="0")
-        elif volume==1:
+        elif volume == 1:
             self.volume_shown.config(text="1")
         elif volume == 2:
             self.volume_shown.config(text="2")
+        elif volume == 3:
+            self.volume_shown.config(text="3")
+        elif volume == 4:
+            self.volume_shown.config(text="4")
+        elif volume == 5:
+            self.volume_shown.config(text="5")
+        elif volume == 6:
+            self.volume_shown.config(text="6")
+        elif volume == 7:
+            self.volume_shown.config(text="7")
+        elif volume == 8:
+            self.volume_shown.config(text="8")
+        elif volume == 9:
+            self.volume_shown.config(text="9")
+        elif volume == 10:
+            self.volume_shown.config(text="10")
 
     def volumedown(self)-> None:
         """
@@ -98,6 +111,23 @@ class Gui():
             self.volume_shown.config(text="1")
         elif volume == 2:
             self.volume_shown.config(text="2")
+        elif volume == 3:
+            self.volume_shown.config(text="3")
+        elif volume == 4:
+            self.volume_shown.config(text="4")
+        elif volume == 5:
+            self.volume_shown.config(text="5")
+        elif volume == 6:
+            self.volume_shown.config(text="6")
+        elif volume == 7:
+            self.volume_shown.config(text="7")
+        elif volume == 8:
+            self.volume_shown.config(text="8")
+        elif volume == 9:
+            self.volume_shown.config(text="9")
+        elif volume == 10:
+            self.volume_shown.config(text="10")
+
 
     def channelup(self)->None:
         """
@@ -117,16 +147,22 @@ class Gui():
         elif channel == 3:
             self.channel.config(text="Channel 3")
             self.channel_name.config(text="NBC")
+        elif channel == 4:
+            self.channel.config(text="Channel 4")
+            self.channel_name.config(text="Cartoon Network")
+        elif channel == 5:
+            self.channel.config(text="Channel 5")
+            self.channel_name.config(text="Nickelodeon")
     def channeldown(self)->None:
         """
         turns the channel to the previous channel
         """
         tv_1.channel_down()
         channel=tv_1.get_channel()
-        if channel ==0:
+        if channel == 0:
             self.channel.config(text="Channel 0")
             self.channel_name.config(text="NONE")
-        elif channel ==1:
+        elif channel == 1:
             self.channel.config(text="Channel 1")
             self.channel_name.config(text="CNN")
         elif channel == 2:
@@ -135,6 +171,12 @@ class Gui():
         elif channel == 3:
             self.channel.config(text="Channel 3")
             self.channel_name.config(text="NBC")
+        elif channel == 4:
+            self.channel.config(text="Channel 4")
+            self.channel_name.config(text="Cartoon Network")
+        elif channel == 5:
+            self.channel.config(text="Channel 5")
+            self.channel_name.config(text="Nickelodeon")
     def mute(self)->None:
         """
         mutes the tv, which brings the volume to 0
